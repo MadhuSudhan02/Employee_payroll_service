@@ -8,3 +8,7 @@ insert into employee_payroll (name, salary, start) values ( 'bill',100000.00,'20
 select * from employee_payroll;
 select * from employee_payroll;
 select * from employee_payroll where start between CAST('2018-01-01' AS DATE)AND DATE(NOW());
+alter table employee_payroll add gender char(1) after name;
+select * from employee_payroll;
+update employee_payroll set gender = 'M' where id = 1 ;
+select * from employee_payroll;
