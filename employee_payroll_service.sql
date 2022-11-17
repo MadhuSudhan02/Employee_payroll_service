@@ -12,3 +12,6 @@ alter table employee_payroll add gender char(1) after name;
 select * from employee_payroll;
 update employee_payroll set gender = 'M' where id = 1 ;
 select * from employee_payroll;
+select sum(salary) from employee_payroll where gender = 'F' group by gender;
+select gender, count(name) from employee_payroll group by gender;
+select * ,avg(salary) from employee_payroll;
